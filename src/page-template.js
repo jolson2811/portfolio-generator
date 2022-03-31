@@ -12,6 +12,7 @@ const generateAbout = aboutText => {
   `;
 };
 
+// create the projects section
 const generateProjects = projectsArr => {
   return `
     <section class="my-3" id="portfolio">
@@ -55,10 +56,11 @@ const generateProjects = projectsArr => {
   `;
 };
 
+// export function to generate entire page
 module.exports = templateData => {
   console.log(templateData);
 
-  // this will create three variables based on data in templateData
+  // destructure page data by section
   const { projects, about, ...header } = templateData;
 
   return `
